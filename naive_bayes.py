@@ -90,4 +90,5 @@ if __name__ == "__main__":
     kfold = KFold(n_splits=10)
     model = GaussianNB()
     results = cross_val_score(model, X, Y, cv=kfold)
-    print(f"\n\n{'-' * 20}\nAccuracy: {results.mean()*100:.2f}% \nSD (σ): {results.std()*100.0:.3f}\n{'-' * 20}\n\n")
+    print(f"\n\n{'-' * 20}\nAccuracy: {results.mean()*100:.2f}%")
+    print(f"SD (σ): {results.std()*100.0:.3f}\n{'-' * 20}\n\n")
